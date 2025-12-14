@@ -3,6 +3,11 @@
 <h3>Hocbigg - Metaphysics</h3>
 <p>
   Path to a free self-taught education in Metaphysics!
+<p>
+  <a href="https://github.com/hocbigg/metaphysics">
+    <img alt="Hocbigg" src="/images/view_on_github.svg"
+  ></a>
+</p>
 </p>
 </div>
 
@@ -40,7 +45,7 @@ they belong in [extras/courses](extras/courses.md), [extras/readings](extras/rea
 - For simplicity, we recommend working through courses (especially Core) in order from top to bottom. Some students choose to study multiple courses at a time in order to vary the material they are working on in a day/week.
 - The courses in the Advanced section are electives. Choose one track to specialize in and complete all the courses listed under it.
 
-**[How to contribute](CONTRIBUTING.md)**
+**[How to contribute](/CONTRIBUTING.html)**
 
 # Communities
 
@@ -59,46 +64,44 @@ they belong in [extras/courses](extras/courses.md), [extras/readings](extras/rea
   - [FediPhilosophy (Mastodon Instance)](https://fediphilosophy.org/)
   - [Philosophy Group (a.gup.pe)](https://a.gup.pe/u/philosophy)
   - [Metaphysics Meetup Groups](https://www.meetup.com/topics/metaphysics/)
-- You can also interact through [GitHub issues](https://github.com/hocbigg/metaphysics/issues). If there is a problem with a course, or a change needs to be made to the curriculum, this is the place to start the conversation. Read more [here](CONTRIBUTING.md).
+- You can also interact through [GitHub issues](https://github.com/hocbigg/metaphysics/issues). If there is a problem with a course, or a change needs to be made to the curriculum, this is the place to start the conversation. Read more [here](/CONTRIBUTING.html).
 
 # Curriculum
 
-- [Intro Metaphysics](#intro-metaphysics)
-- [Core Metaphysics](#core-metaphysics)
-- [Advanced Metaphysics](#advanced-metaphysics)
+- [Intro Metaphysics](#intro)
+- [Core Metaphysics](#core)
+- [Advanced Metaphysics](#advanced)
     - [Ontology](#ontology)
     - [Philosophy of Mind](#philosophy-of-mind)
     - [Philosophy of Time and Causality](#philosophy-of-time-and-causality)
     - [Modal Metaphysics and Logic](#modal-metaphysics-and-logic)
 - [Final Project](#final-project)
 
-<!-- /TOC -->
-
 Note: The overall sequence is linear (Intro → Core → Advanced), but logic can be studied alongside intro courses. 
 
-## Intro Metaphysics
+## Intro
 
 These provide orientation, test interest, and build essential skills like argumentation and reading philosophical texts.
 
 | Subject | Why study? | Book | Videos |
-| :--- | :--- | --- | --- |
-| Introduction to Philosophy | Provides foundational orientation to philosophy, including key areas like epistemology, metaphysics, and philosophy of mind, building essential skills in argumentation and critical thinking. |  | [Introduction to Philosophy](https://www.coursera.org/learn/philosophy) |
-| Reality Bites: Introduction to Metaphysics | Introduces core metaphysical concepts such as universals, substance, time, causality, persistence, and composition through accessible analogies, testing interest in metaphysical problems. |  | [Reality Bites: Introduction to Metaphysics](https://www.coursera.org/learn/metaphysics) |
-| Language, Proof and Logic | Develops formal logic skills essential for rigorous metaphysical argumentation, covering proofs, semantics, and first-order logic to analyze philosophical claims precisely. |  | [Language, Proof and Logic](https://www.edx.org/course/language-proof-and-logic) |
+| :--- | :--- | :--- | :--- |
+| Introduction to Philosophy | Provides foundational orientation to philosophy, including key areas like epistemology, metaphysics, and philosophy of mind, building essential skills in argumentation and critical thinking. | [An Introduction to Philosophy](https://open.umn.edu/opentextbooks/textbooks/598) (open textbook) | [Introduction to Philosophy](https://www.coursera.org/learn/philosophy) |
+| Reality Bites: Introduction to Metaphysics | Introduces core metaphysical concepts such as universals, substance, time, causality, persistence, and composition through accessible analogies, testing interest in metaphysical problems. | [Metaphysics: A Guided Tour for Beginners](https://www.researchgate.net/publication/342082817_Metaphysics_A_Guided_Tour_for_Beginners) (free PDF) | [Reality Bites: Introduction to Metaphysics](https://www.coursera.org/learn/metaphysics) |
+| Language, Proof and Logic | Develops formal logic skills essential for rigorous metaphysical argumentation, covering proofs, semantics, and first-order logic to analyze philosophical claims precisely. | [Language, Proof and Logic](https://homepages.uc.edu/~martinj/Symbolic_Logic/341%20Syllabus%2C%20Textbook%2C%20Handouts%2C%20Notes/LPL%20textbook.pdf) (free PDF) | [Language, Proof and Logic](https://www.edx.org/course/language-proof-and-logic) |
 
-## Core Metaphysics
+## Core
 
 Builds foundational knowledge equivalent to lower- and upper-division coursework. Emphasize practice: weekly essays on readings, group discussions for critique.
 
 | Subject | Why study? | Book | Videos |
-| :--- | :--- | --- | --- |
-| Metaphysics | Establishes core metaphysical foundations on existence, mind-body problem, personal identity, causation, and free will, equivalent to advanced undergraduate coursework. |  | [Metaphysics](https://ocw.mit.edu/courses/24-221-metaphysics-spring-2015/) |
-| Epistemology | Explores the nature of knowledge, justification, skepticism, and sources of belief, providing tools to evaluate metaphysical claims about reality and certainty. | *Epistemology* by Richard Fumerton; free alternative: SEP articles on [Epistemology](https://plato.stanford.edu/entries/epistemology/) and [Skepticism](https://plato.stanford.edu/entries/skepticism/) |  |
-| Ancient Philosophy: Plato & His Precursors + Aristotle & His Successors | Grounds metaphysics in historical foundations, examining forms, being, causality, and substance from Plato and Aristotle to inform contemporary debates. |  | [Ancient Philosophy: Plato & His Precursors](https://www.coursera.org/learn/plato); [Ancient Philosophy: Aristotle & His Successors](https://www.coursera.org/learn/aristotle) |
+| :--- | :--- | :--- | :--- |
+| Metaphysics | Establishes core metaphysical foundations on existence, mind-body problem, personal identity, causation, and free will, equivalent to advanced undergraduate coursework. | [Metaphysics: A Contemporary Introduction by Michael J. Loux](https://www.routledge.com/Metaphysics-A-Contemporary-Introduction/Loux/p/book/9781138639348) (Amazon link; no free version found) | [Metaphysics](https://dspace.mit.edu/bitstream/handle/1721.1/98368/24-221-fall-2005/contents/index.htm) |
+| Epistemology | Explores the nature of knowledge, justification, skepticism, and sources of belief, providing tools to evaluate metaphysical claims about reality and certainty. | *Epistemology* by Richard Fumerton; free alternative: SEP articles on [Epistemology](https://plato.stanford.edu/entries/epistemology/) and [Skepticism](https://plato.stanford.edu/entries/skepticism/) | Covered in Introduction to Philosophy |
+| Ancient Philosophy: Plato & His Precursors + Aristotle & His Successors | Grounds metaphysics in historical foundations, examining forms, being, causality, and substance from Plato and Aristotle to inform contemporary debates. | [Readings in Ancient Greek Philosophy: From Thales to Aristotle](https://archive.org/details/readingsinancien0000unse_y2y7) (free on Archive.org) | [Ancient Philosophy: Plato & His Precursors](https://www.coursera.org/learn/plato); [Ancient Philosophy: Aristotle & His Successors](https://www.coursera.org/learn/aristotle) |
 | Philosophy and the Science of Human Nature | Integrates metaphysics with psychology, addressing mind-body dualism, personal identity, and free will to understand human nature scientifically and philosophically. |  | [Philosophy and the Science of Human Nature](https://oyc.yale.edu/philosophy/phil-181) |
 | Death | Applies metaphysical concepts to immortality, personal identity, and the value of life, deepening understanding through existential and applied perspectives. |  | [Death](https://oyc.yale.edu/philosophy/phil-176) |
 
-## Advanced Metaphysics
+## Advanced
 
 Choose one specialization path and complete all items within it for depth (equivalent to senior electives). Each path ~12–24 weeks, 10–15 hours/week. Use SEP for supplemental readings; join philosophy forums for peer feedback on advanced essays/projects.
 
@@ -107,36 +110,30 @@ Choose one specialization path and complete all items within it for depth (equiv
 (Nature of Being and Existence)
 
 | Subject | Why study? | Book | Videos |
-| :--- | :--- | --- | --- |
-| Ontology | Investigates the fundamental nature of being, existence, categories, and ontological debates, providing a structured overview essential for advanced metaphysical inquiry. | *A Survey of Metaphysics* by E.J. Lowe; free alternative: SEP [Ontology](https://plato.stanford.edu/entries/ontology/) and [Categories](https://plato.stanford.edu/entries/categories/) | [Exploring Human Existence: Martin Heidegger’s Being and Time](https://online.stanford.edu/courses/csp-xphi123-exploring-human-existence-martin-heidegger-s-being-and-time) |
+| :--- | :--- | :--- | :--- |
+| Ontology | Investigates the fundamental nature of being, existence, categories, and ontological debates, providing a structured overview essential for advanced metaphysical inquiry. | [*A Survey of Metaphysics* by E.J. Lowe](https://www.amazon.com/Survey-Metaphysics-E-J-Lowe/dp/0198752539) (Amazon link; no free version found) | [Reality Bites: Introduction to Metaphysics](https://www.coursera.org/learn/metaphysics) (covers core ontology) |
 
 ### Philosophy of Mind
 
 | Subject | Why study? | Book | Videos |
-| :--- | :--- | --- | --- |
-| Philosophy of Mind | Examines consciousness, mental states, AI, and the mind-body relation, bridging metaphysics with cognitive science for insights into human cognition and identity. | *Philosophy of Mind: Classical and Contemporary Readings* ed. by David Chalmers; free alternative: SEP [Philosophy of Mind](https://plato.stanford.edu/entries/philosophy-mind/) and [Consciousness](https://plato.stanford.edu/entries/consciousness/) | [Minds and Machines](https://online.stanford.edu/courses/symsys-1-minds-and-machines); [Philosophy of the Cognitive Sciences](https://www.coursera.org/learn/philosophy-cognitive-sciences) |
+| :--- | :--- | :--- | :--- |
+| Philosophy of Mind | Examines consciousness, mental states, AI, and the mind-body relation, bridging metaphysics with cognitive science for insights into human cognition and identity. | [*Philosophy of Mind: Classical and Contemporary Readings* ed. by David Chalmers](https://www.amazon.com/Philosophy-Mind-Classical-Contemporary-Readings/dp/0190640859) (Amazon link; no free version found) | [Philosophy and the Cognitive Sciences](https://www.coursera.org/learn/philosophy-cognitive-sciences) |
 
 ### Philosophy of Time and Causality
 
 | Subject | Why study? | Book | Videos |
-| :--- | :--- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | Philosophy of Time and Causality | Analyzes the metaphysics of time, causality, and related puzzles (e.g., McTaggart's argument), clarifying temporal experience and causal necessity in reality. | *Metaphysics: A Contemporary Introduction* by Michael J. Loux; free alternative: SEP [Time](https://plato.stanford.edu/entries/time/) and [Causation](https://plato.stanford.edu/entries/causation-metaphysics/) |  |
 
 ### Modal Metaphysics and Logic
 
 | Subject | Why study? | Book | Videos |
-| :--- | :--- | --- | --- |
-| Modal Metaphysics and Logic | Explores necessity, possibility, possible worlds, and modal proofs, advancing logical tools for metaphysical analysis of contingency and counterfactuals. | *Modal Logic for Philosophers* by James Garson; free alternative: SEP [Modal Logic](https://plato.stanford.edu/entries/logic-modal/) and [Possible Worlds](https://plato.stanford.edu/entries/possible-worlds/) | [Semantics of First-Order Logic](https://www.edx.org/course/semantics-of-first-order-logic) |
+| :--- | :--- | :--- | :--- |
+| Modal Metaphysics and Logic | Explores necessity, possibility, possible worlds, and modal proofs, advancing logical tools for metaphysical analysis of contingency and counterfactuals. | [*Modal Logic for Philosophers* by James Garson](https://www.cambridge.org/core/books/modal-logic-for-philosophers/F06AF29110ED09BE750EE0C649098193) (Amazon link; no free version found); free alternative: SEP [Modal Logic](https://plato.stanford.edu/entries/logic-modal/) and [Possible Worlds](https://plato.stanford.edu/entries/possible-worlds/) | [Modal Logic](https://ocw.mit.edu/courses/24-244-modal-logic-spring-2015/) (MIT OCW) |
 
 ## Final Project
 
 A culminating project to apply and demonstrate knowledge: Write a 15–20 page original philosophical paper on a metaphysical topic (e.g., "Is Time Real? A Defense of Eternalism" or "Ontological Commitments in Quantum Mechanics"), integrating concepts from Intro, Core, and chosen Advanced path.
-
-Scoped and structured stages: (1) Planning (4 weeks: proposal, literature review using SEP/PhilPapers, outline); (2) Development (8 weeks: drafting arguments, counterarguments, revisions); (3) Completion (4 weeks: final edit, abstract, bibliography).
-
-Goals: Synthesize theory/methods, argue rigorously, showcase critical skills. Deliverables: Paper, 5–10 minute video presentation (record via Zoom). Evaluation: Self-assess against rubric (clarity, originality, evidence); seek peer review via r/askphilosophy, academic forums, or study groups. 
-
-Optional: Submit to undergraduate philosophy journals or blogs for validation. This consolidates learning and prepares for further study or teaching.
 
 ## Congratulations
 

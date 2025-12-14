@@ -18,7 +18,7 @@ Courses | Duration | Effort
 :-- | :--: | :--:
 [Arthur Holmes: A History of Philosophy](https://www.youtube.com/playlist?list=PL9GwT4_YRZdBf9nIUHs0zjrnUVl-KBNSM) (Wheaton College) | - | 4–6 hours/week
 
-# Online Learning - Great Courses
+## Online Learning - Great Courses
 
 
 Courses | Duration | Effort
