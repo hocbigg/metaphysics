@@ -5,13 +5,25 @@ description: Path to a free self-taught education in Metaphysics!
 
 ## Introduction
 
-The curriculum is a complete education in Metaphysics using online materials.
+Metaphysics is the systematic inquiry into the fundamental structure of reality. While empirical sciences examine how specific physical systems behave, metaphysics investigates the foundational categories and principles that make any worldview intelligible: what it means for something to exist, what distinguishes an object from its properties, whether time genuinely flows or is a static dimension, what connects a cause to its effect, and what preserves the identity of a person across change. Studying metaphysics sharpens conceptual precision, surfaces hidden assumptions behind scientific theories, and develops the ability to evaluate rigorous abstract arguments that empirical observation alone cannot settle.
 
-The program emphasizes critical thinking, logical argumentation, textual analysis, and philosophical writing, drawing from historical and contemporary perspectives. It prioritizes free MOOCs where available, supplemented by high-quality textbooks when necessary (authoritative paid options first, followed by free/open alternatives like the Stanford Encyclopedia of Philosophy (SEP) entries). 
+This curriculum is designed for self-directed learners with no prior formal background in academic philosophy. You do not need university enrollment or access to academic library subscriptions; all subjects rely on accessible textbooks, canonical monographs, open-access texts, and freely auditable courses. Metaphysics does, however, require patient and disciplined reading. Metaphysical arguments often hinge on fine-grained distinctions between concepts, words, and real entities, so progress depends on reading texts closely, breaking arguments into explicit premises and conclusions, and engaging with formal symbolic representations.
 
-Learners will develop competencies in analyzing metaphysical arguments, constructing coherent positions on ontological issues, evaluating epistemological foundations of metaphysical claims, and applying metaphysical concepts to real-world problems like personal identity or free will.
+### How to Navigate the Curriculum
 
-## Communities
+The curriculum is arranged in three progressive stages that build foundational concepts before applying them to specific debates:
+
+- **Orientation and Logical Tools:** Begin with *Introduction to Metaphysics* and *Logic for Metaphysics*. Formal logic is the essential toolkit of modern metaphysics. Working through first-order predicate logic with identity equips you with the formal machinery required to analyze ontological commitment, quantify over entities, and evaluate arguments without linguistic confusion.
+- **Historical Foundations:** Proceed next to *Ancient Metaphysics* and *Early Modern Metaphysics*. Modern analytic debates do not exist in a vacuum; contemporary positions on universals, substance, mind-body interaction, and causation are direct re-examinations of problems framed by Plato, Aristotle, Descartes, Leibniz, and Hume. Understanding these historical roots makes modern analytic formulations immediately more intelligible.
+- **Core Analytic Problem Spaces:** The remaining units cover the core systematic debates of the discipline: ontology, modality, time, causation, material objects, personal identity, and free will. While these problem areas can be studied in varying sequences, tackling *Ontology, Categories, and Properties* and *Modality and Possible Worlds* first will make the rest far easier. Subsequent debates—such as the persistence of objects across time, counterfactual accounts of causation, and incompatibilist arguments about free will—rely constantly on property theory and possible-worlds semantics.
+
+### Next Steps
+
+This curriculum is strictly limited to the foundational core: the central concepts, landmark arguments, and standard frameworks that form the prerequisite baseline for anyone studying metaphysics. It deliberately omits specialized subfields, technical research methodologies, and niche contemporary debates.
+
+After completing this foundational core, you can branch out into specialized subfields through [Advanced Topics](advanced_topics.md), engage directly with landmark treatises and essays through [Readings](extras/readings.md), study full-length recorded lecture series through [Courses](extras/courses.md), or apply your knowledge through practical modeling, formalization, and writing via [Projects](projects.md).
+
+### Communities
 
 - Forums:
     - [The Philosophy Forum](https://thephilosophyforum.com/)
