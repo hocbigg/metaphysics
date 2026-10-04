@@ -1,97 +1,556 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
 
-<title>Great Readings</title>
-<link rel="stylesheet" href="/metaphysics/style.css">
-<meta name="description" content="">
+  <title>Great Readings</title>
+  <meta name="description" content="Great Readings curriculum by hocbigg.">
+  <meta name="author" content="hocbigg">
 
-<link rel="canonical" href="https://hocbigg.github.io/metaphysics/">
+  <link rel="canonical" href="https://hocbigg.github.io/metaphysics/extras/readings.html">
+  <meta property="og:title" content="Great Readings">
+  <meta property="og:description" content="Great Readings curriculum by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/metaphysics/extras/readings.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
 
-<meta property="og:title" content="Great Readings">
-<meta property="og:description" content="">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://hocbigg.github.io/metaphysics/">
-<meta name="author" content="hocbigg">
-<link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
 </head>
-
 <body>
 
-<nav>
-<a href="/">Hocbigg</a>
-<a href="/metaphysics/">Metaphysics</a>
-<a href="/metaphysics/advanced_topics.html">Advanced Topics</a>
-<a href="/metaphysics/projects.html">Projects</a>
-<a href="/metaphysics/extras/courses.html">Extra Courses</a>
-<a href="/metaphysics/extras/readings.html">Extra Reading</a>
-<a href="https://github.com/hocbigg/metaphysics/" target="_blank">View on Github</a>
-</nav>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<main>
-<article>
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/metaphysics/">Metaphysics</a></li>
+      <li><a href="/metaphysics/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/metaphysics/projects.html">Projects</a></li>
+      <li><a href="/metaphysics/extras/readings.html">Extra Readings</a></li>
+      <li><a href="/metaphysics/extras/courses.html">Extra Courses</a></li>
+      <li><a href="https://github.com/hocbigg/metaphysics" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
 
 <h1 id="great-readings">Great Readings</h1>
-<p>This document consists of great books or articles on [Field].
-Some are here because there is a course covering the same material;
-some are just great books that you should read at some point in your career.</p>
-<p>Once you have made it through most of the curriculum, knowing whether a book is worth your time will become easier.
-Or, if you are struggling in one of the courses, perhaps reading a book on the subject will help.</p>
-<table>
+<p>This curated collection gathers milestone treatises, transformative monographs, and field-defining essays in <strong>Metaphysics</strong>. </p>
+<p>Rather than introductory survey textbooks, these works represent the seminal conceptual breakthroughs, systematic frameworks, and dialectical debates that define historical, analytic, and contemporary metaphysical inquiry.</p>
+<ul>
+<li><a href="#historical-foundations-of-metaphysics">Historical Foundations of Metaphysics</a></li>
+<li><a href="#ontology-categories-and-fundamentality">Ontology, Categories, and Fundamentality</a></li>
+<li><a href="#modality-essence-and-possible-worlds">Modality, Essence, and Possible Worlds</a></li>
+<li><a href="#time-persistence-and-material-constitution">Time, Persistence, and Material Constitution</a></li>
+<li><a href="#causation-laws-and-metaphysics-of-science">Causation, Laws, and Metaphysics of Science</a></li>
+<li><a href="#mind-personal-identity-and-free-will">Mind, Personal Identity, and Free Will</a></li>
+<li><a href="#social-ontology-and-conceptual-engineering">Social Ontology and Conceptual Engineering</a></li>
+</ul>
+<h2 id="historical-foundations-of-metaphysics">Historical Foundations of Metaphysics</h2>
+<div class="table-wrapper" tabindex="0" role="region" aria-label="Scrollable table"><table>
 <thead>
 <tr>
-<th style="text-align: left;">Name</th>
-<th style="text-align: center;">Author(s)</th>
+<th>Title</th>
+<th>Author(s)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://global.oup.com/academic/product/metaphysics-a-very-short-introduction-9780199657124">Metaphysics: A Very Short Introduction</a></td>
-<td style="text-align: center;">Stephen Mumford</td>
+<td><a href="http://classics.mit.edu/Aristotle/metaphysics.html" target="_blank" rel="noopener noreferrer"><em>Metaphysics</em></a></td>
+<td>Aristotle</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://global.oup.com/academic/product/metaphysics-9780190941611">Metaphysics: An Introduction to Contemporary Debates and Their History</a></td>
-<td style="text-align: center;">Anna Marmodoro, Erasmus Mayr</td>
+<td><a href="https://www.earlymoderntexts.com/assets/pdfs/descartes1641.pdf" target="_blank" rel="noopener noreferrer"><em>Meditations on First Philosophy</em></a></td>
+<td>René Descartes</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://global.oup.com/academic/product/metaphysics-9780199261970">Metaphysics: A Guide and Anthology</a></td>
-<td style="text-align: center;">Tim Crane, Katalin Farkas</td>
+<td><a href="https://www.gutenberg.org/ebooks/3800" target="_blank" rel="noopener noreferrer"><em>Ethics</em></a></td>
+<td>Baruch Spinoza</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.gutenberg.org/ebooks/3484">The Metaphysics</a></td>
-<td style="text-align: center;">Aristotle</td>
+<td><a href="https://www.earlymoderntexts.com/assets/pdfs/leibniz1714b.pdf" target="_blank" rel="noopener noreferrer"><em>Monadology</em></a></td>
+<td>Gottfried Wilhelm Leibniz</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.gutenberg.org/ebooks/59">Meditations on First Philosophy</a></td>
-<td style="text-align: center;">René Descartes</td>
+<td><a href="https://www.gutenberg.org/ebooks/9662" target="_blank" rel="noopener noreferrer"><em>An Enquiry Concerning Human Understanding</em></a></td>
+<td>David Hume</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.gutenberg.org/ebooks/3800">Ethics</a></td>
-<td style="text-align: center;">Baruch Spinoza</td>
+<td><a href="https://www.earlymoderntexts.com/assets/pdfs/kant1783.pdf" target="_blank" rel="noopener noreferrer"><em>Prolegomena to Any Future Metaphysics</em></a></td>
+<td>Immanuel Kant</td>
 </tr>
 <tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.gutenberg.org/ebooks/9662">An Enquiry Concerning Human Understanding</a></td>
-<td style="text-align: center;">David Hume</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.gutenberg.org/ebooks/52821">Prolegomena to Any Future Metaphysics</a></td>
-<td style="text-align: center;">Immanuel Kant</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/Being-Time-Martin-Heidegger/dp/0061575593">Being and Time</a></td>
-<td style="text-align: center;">Martin Heidegger</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a target="_blank" rel="noopener noreferrer" href="https://www.cambridge.org/core/books/sameness-and-substance-renewed/3C21B28D0AFD2A5F481DC3F6A3E3B6E5">Sameness and Substance Renewed</a></td>
-<td style="text-align: center;">David Wiggins</td>
+<td><a href="https://books.google.com/books?isbn=9780061575594" target="_blank" rel="noopener noreferrer"><em>Being and Time</em></a></td>
+<td>Martin Heidegger</td>
 </tr>
 </tbody>
-</table>
-</article>
-</main>
+</table></div>
+<h2 id="ontology-categories-and-fundamentality">Ontology, Categories, and Fundamentality</h2>
+<div class="table-wrapper" tabindex="0" role="region" aria-label="Scrollable table"><table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Author(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780674323513" target="_blank" rel="noopener noreferrer"><em>From a Logical Point of View: Nine Logico-Philosophical Essays</em></a> (includes "On What There Is")</td>
+<td>W. V. O. Quine</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780415051859" target="_blank" rel="noopener noreferrer"><em>Individuals: An Essay in Descriptive Metaphysics</em></a></td>
+<td>P. F. Strawson</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780521456197" target="_blank" rel="noopener noreferrer"><em>Sameness and Substance Renewed</em></a></td>
+<td>David Wiggins</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780199697908" target="_blank" rel="noopener noreferrer"><em>Writing the Book of the World</em></a></td>
+<td>Theodore Sider</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780199546046" target="_blank" rel="noopener noreferrer"><em>Metametaphysics: New Essays on the Foundations of Ontology</em></a></td>
+<td>David J. Chalmers, David Manley, &amp; Ryan Wasserman (eds.)</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="modality-essence-and-possible-worlds">Modality, Essence, and Possible Worlds</h2>
+<div class="table-wrapper" tabindex="0" role="region" aria-label="Scrollable table"><table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Author(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780674598461" target="_blank" rel="noopener noreferrer"><em>Naming and Necessity</em></a></td>
+<td>Saul A. Kripke</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780198244141" target="_blank" rel="noopener noreferrer"><em>The Nature of Necessity</em></a></td>
+<td>Alvin Plantinga</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780631224266" target="_blank" rel="noopener noreferrer"><em>On the Plurality of Worlds</em></a></td>
+<td>David Lewis</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780199278718" target="_blank" rel="noopener noreferrer"><em>Modality and Tense: Philosophical Papers</em></a> (includes "Essence and Modality")</td>
+<td>Kit Fine</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="time-persistence-and-material-constitution">Time, Persistence, and Material Constitution</h2>
+<div class="table-wrapper" tabindex="0" role="region" aria-label="Scrollable table"><table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Author(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://en.wikisource.org/wiki/The_Unreality_of_Time" target="_blank" rel="noopener noreferrer"><em>The Unreality of Time</em></a></td>
+<td>J. M. E. McTaggart</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780801483066" target="_blank" rel="noopener noreferrer"><em>Material Beings</em></a></td>
+<td>Peter van Inwagen</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780199263523" target="_blank" rel="noopener noreferrer"><em>Four-Dimensionalism: An Ontology of Persistence and Time</em></a></td>
+<td>Theodore Sider</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780199241460" target="_blank" rel="noopener noreferrer"><em>Parts: A Study in Ontology</em></a></td>
+<td>Peter Simons</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780199266319" target="_blank" rel="noopener noreferrer"><em>Objects and Persons</em></a></td>
+<td>Trenton Merricks</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="causation-laws-and-metaphysics-of-science">Causation, Laws, and Metaphysics of Science</h2>
+<div class="table-wrapper" tabindex="0" role="region" aria-label="Scrollable table"><table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Author(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780198246428" target="_blank" rel="noopener noreferrer"><em>The Cement of the Universe: A Study of Causation</em></a></td>
+<td>J. L. Mackie</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780195036466" target="_blank" rel="noopener noreferrer"><em>Philosophical Papers: Volume II</em></a> (includes "Causation")</td>
+<td>David Lewis</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780521314817" target="_blank" rel="noopener noreferrer"><em>What Is a Law of Nature?</em></a></td>
+<td>D. M. Armstrong</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780691165714" target="_blank" rel="noopener noreferrer"><em>Philosophy of Physics: Space and Time</em></a></td>
+<td>Tim Maudlin</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780199573097" target="_blank" rel="noopener noreferrer"><em>Every Thing Must Go: Metaphysics Naturalized</em></a></td>
+<td>James Ladyman &amp; Don Ross</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="mind-personal-identity-and-free-will">Mind, Personal Identity, and Free Will</h2>
+<div class="table-wrapper" tabindex="0" role="region" aria-label="Scrollable table"><table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Author(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9781107604643" target="_blank" rel="noopener noreferrer"><em>Mortal Questions</em></a> (includes "What Is It Like to Be a Bat?")</td>
+<td>Thomas Nagel</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780521337861" target="_blank" rel="noopener noreferrer"><em>The Importance of What We Care About</em></a> (includes "Alternate Possibilities and Moral Responsibility")</td>
+<td>Harry G. Frankfurt</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780198249245" target="_blank" rel="noopener noreferrer"><em>An Essay on Free Will</em></a></td>
+<td>Peter van Inwagen</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780198249085" target="_blank" rel="noopener noreferrer"><em>Reasons and Persons</em></a></td>
+<td>Derek Parfit</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780195117899" target="_blank" rel="noopener noreferrer"><em>The Conscious Mind: In Search of a Fundamental Theory</em></a></td>
+<td>David J. Chalmers</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780262611534" target="_blank" rel="noopener noreferrer"><em>Mind in a Physical World: An Essay on the Mind-Body Problem and Mental Causation</em></a></td>
+<td>Jaegwon Kim</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="social-ontology-and-conceptual-engineering">Social Ontology and Conceptual Engineering</h2>
+<div class="table-wrapper" tabindex="0" role="region" aria-label="Scrollable table"><table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Author(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780684831794" target="_blank" rel="noopener noreferrer"><em>The Construction of Social Reality</em></a></td>
+<td>John R. Searle</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780199892631" target="_blank" rel="noopener noreferrer"><em>Resisting Reality: Social Construction and Social Critique</em></a></td>
+<td>Sally Haslanger</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780198814719" target="_blank" rel="noopener noreferrer"><em>Fixing Language: An Essay on Conceptual Engineering</em></a></td>
+<td>Herman Cappelen</td>
+</tr>
+<tr>
+<td><a href="https://books.google.com/books?isbn=9780199591565" target="_blank" rel="noopener noreferrer"><em>Group Agency: The Possibility, Design, and Status of Corporate Agents</em></a></td>
+<td>Christian List &amp; Philip Pettit</td>
+</tr>
+</tbody>
+</table></div>
+    </article>
+  </main>
 
 </body>
 </html>

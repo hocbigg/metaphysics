@@ -1,223 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
 
-<title>Hocbigg - Metaphysics</title>
-<link rel="stylesheet" href="/metaphysics/style.css">
-<meta name="description" content="Path to a free self-taught education in Metaphysics!">
+  <title>Hocbigg - Metaphysics</title>
+  <meta name="description" content="Path to a free self-taught education in Metaphysics!">
+  <meta name="author" content="hocbigg">
 
-<link rel="canonical" href="https://hocbigg.github.io/metaphysics/">
+  <link rel="canonical" href="https://hocbigg.github.io/metaphysics/">
+  <meta property="og:title" content="Hocbigg - Metaphysics">
+  <meta property="og:description" content="Path to a free self-taught education in Metaphysics!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/metaphysics/">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
 
-<meta property="og:title" content="Hocbigg - Metaphysics">
-<meta property="og:description" content="Path to a free self-taught education in Metaphysics!">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://hocbigg.github.io/metaphysics/">
-<meta name="author" content="hocbigg">
-<link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
 </head>
-
 <body>
 
-<nav>
-<a href="/">Hocbigg</a>
-<a href="/metaphysics/">Metaphysics</a>
-<a href="/metaphysics/advanced_topics.html">Advanced Topics</a>
-<a href="/metaphysics/projects.html">Projects</a>
-<a href="/metaphysics/extras/courses.html">Extra Courses</a>
-<a href="/metaphysics/extras/readings.html">Extra Reading</a>
-<a href="https://github.com/hocbigg/metaphysics/" target="_blank">View on Github</a>
-</nav>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<main>
-<article>
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/metaphysics/">Metaphysics</a></li>
+      <li><a href="/metaphysics/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="/metaphysics/projects.html">Projects</a></li>
+      <li><a href="/metaphysics/extras/readings.html">Extra Readings</a></li>
+      <li><a href="/metaphysics/extras/courses.html">Extra Courses</a></li>
+      <li><a href="https://github.com/hocbigg/metaphysics" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
 
+  <main id="main-content">
+    <article>
 <header class="page-header">
-  <img src="/images/logo.png" alt="">
+  <img src="/images/logo.png" alt="Hocbigg logo">
   <h1>Hocbigg - Metaphysics</h1>
+  <p class="page-subtitle">Path to a free self-taught education in Metaphysics!</p>
+  <p class="last-updated"><small>Last updated on: <time datetime="2026-10-01">2026-10-01</time></small></p>
 </header>
-
-<h1 id="contents">Contents</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Metaphysics is the systematic inquiry into the fundamental structure of reality. While empirical sciences examine how specific physical systems behave, metaphysics investigates the foundational categories and principles that make any worldview intelligible: what it means for something to exist, what distinguishes an object from its properties, whether time genuinely flows or is a static dimension, what connects a cause to its effect, and what preserves the identity of a person across change. Studying metaphysics sharpens conceptual precision, surfaces hidden assumptions behind scientific theories, and develops the ability to evaluate rigorous abstract arguments that empirical observation alone cannot settle.</p>
+<p>This curriculum is designed for self-directed learners with no prior formal background in academic philosophy. You do not need university enrollment or access to academic library subscriptions; all subjects rely on accessible textbooks, canonical monographs, open-access texts, and freely auditable courses. Metaphysics does, however, require patient and disciplined reading. Metaphysical arguments often hinge on fine-grained distinctions between concepts, words, and real entities, so progress depends on reading texts closely, breaking arguments into explicit premises and conclusions, and engaging with formal symbolic representations.</p>
+<h3 id="how-to-navigate-the-curriculum">How to Navigate the Curriculum</h3>
+<p>The curriculum is arranged in three progressive stages that build foundational concepts before applying them to specific debates:</p>
 <ul>
-<li><a href="#summary">Summary</a></li>
-<li><a href="#communities">Communities</a></li>
-<li><a href="#curriculum">Curriculum</a></li>
-<li><a href="#code-of-conduct">Code of conduct</a></li>
+<li><strong>Orientation and Logical Tools:</strong> Begin with <em>Introduction to Metaphysics</em> and <em>Logic for Metaphysics</em>. Formal logic is the essential toolkit of modern metaphysics. Working through first-order predicate logic with identity equips you with the formal machinery required to analyze ontological commitment, quantify over entities, and evaluate arguments without linguistic confusion.</li>
+<li><strong>Historical Foundations:</strong> Proceed next to <em>Ancient Metaphysics</em> and <em>Early Modern Metaphysics</em>. Modern analytic debates do not exist in a vacuum; contemporary positions on universals, substance, mind-body interaction, and causation are direct re-examinations of problems framed by Plato, Aristotle, Descartes, Leibniz, and Hume. Understanding these historical roots makes modern analytic formulations immediately more intelligible.</li>
+<li><strong>Core Analytic Problem Spaces:</strong> The remaining units cover the core systematic debates of the discipline: ontology, modality, time, causation, material objects, personal identity, and free will. While these problem areas can be studied in varying sequences, tackling <em>Ontology, Categories, and Properties</em> and <em>Modality and Possible Worlds</em> first will make the rest far easier. Subsequent debates—such as the persistence of objects across time, counterfactual accounts of causation, and incompatibilist arguments about free will—rely constantly on property theory and possible-worlds semantics.</li>
 </ul>
-<h1 id="summary">Summary</h1>
-<p>The curriculum is a complete education in Metaphysics using online materials.</p>
-<p>The program emphasizes critical thinking, logical argumentation, textual analysis, and philosophical writing, drawing from historical and contemporary perspectives. It prioritizes free MOOCs where available, supplemented by high-quality textbooks when necessary (authoritative paid options first, followed by free/open alternatives like the Stanford Encyclopedia of Philosophy (SEP) entries). </p>
-<p>Learners will develop competencies in analyzing metaphysical arguments, constructing coherent positions on ontological issues, evaluating epistemological foundations of metaphysical claims, and applying metaphysical concepts to real-world problems like personal identity or free will.</p>
-<h2 id="organization">Organization</h2>
-<p>This repository is organized into three main components:</p>
-<ul>
-<li><strong>Core Curriculum</strong> (this page): the foundational knowledge of the field;</li>
-<li><strong><a href="advanced_topics.html">Advanced Topics</a></strong>: focused study in specific areas;</li>
-<li><strong><a href="projects.html">Projects</a></strong>: support learning through practical application throughout the curriculum.</li>
-</ul>
-<p><strong>Process:</strong> Learners may work through the curriculum independently or collaboratively, and either sequentially or selectively.</p>
-<ul>
-<li>For simplicity, courses in the Core Curriculum are ordered according to their prerequisites.</li>
-<li>The Core Curriculum provides a shared foundation and is intended to be completed in full.</li>
-<li>Advanced Topics are optional; learners are encouraged to select one area of focus and complete all courses within that topic.</li>
-</ul>
-<p>Practical work is integrated through the <a href="projects.html">Projects section</a> and may be undertaken alongside coursework.</p>
-<p>Note: When there are courses or books that don't fit into the curriculum but are otherwise of high quality,
-they belong in <a href="extras/courses.html">extras/courses</a>, <a href="extras/readings.html">extras/readings</a>.</p>
-<p><strong><a href="/CONTRIBUTING.html">How to contribute</a></strong></p>
-<h1 id="communities">Communities</h1>
+<h3 id="next-steps">Next Steps</h3>
+<p>This curriculum is strictly limited to the foundational core: the central concepts, landmark arguments, and standard frameworks that form the prerequisite baseline for anyone studying metaphysics. It deliberately omits specialized subfields, technical research methodologies, and niche contemporary debates.</p>
+<p>After completing this foundational core, you can branch out into specialized subfields through <a href="advanced_topics.html">Advanced Topics</a>, engage directly with landmark treatises and essays through <a href="extras/readings.html">Readings</a>, study full-length recorded lecture series through <a href="extras/courses.html">Courses</a>, or apply your knowledge through practical modeling, formalization, and writing via <a href="projects.html">Projects</a>.</p>
+<h3 id="communities">Communities</h3>
 <ul>
 <li>Forums:<ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://thephilosophyforum.com/">The Philosophy Forum</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://onlinephilosophyclub.com/forums/">Online Philosophy Club</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://forum.philosophynow.org/">Philosophy Now Forum</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://able2know.org/forum/metaphysics/">Able2Know Metaphysics</a></li>
+<li><a href="https://thephilosophyforum.com/" target="_blank" rel="noopener noreferrer">The Philosophy Forum</a></li>
+<li><a href="https://onlinephilosophyclub.com/forums/" target="_blank" rel="noopener noreferrer">Online Philosophy Club</a></li>
+<li><a href="https://forum.philosophynow.org/" target="_blank" rel="noopener noreferrer">Philosophy Now Forum</a></li>
+<li><a href="https://able2know.org/forum/metaphysics/" target="_blank" rel="noopener noreferrer">Able2Know Metaphysics</a></li>
 </ul>
 </li>
 <li>Subreddits:<ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/Metaphysics/">r/Metaphysics</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/askphilosophy/">r/askphilosophy</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/philosophy/">r/philosophy</a></li>
+<li><a href="https://www.reddit.com/r/Metaphysics/" target="_blank" rel="noopener noreferrer">r/Metaphysics</a></li>
+<li><a href="https://www.reddit.com/r/askphilosophy/" target="_blank" rel="noopener noreferrer">r/askphilosophy</a></li>
+<li><a href="https://www.reddit.com/r/philosophy/" target="_blank" rel="noopener noreferrer">r/philosophy</a></li>
 </ul>
 </li>
 <li>Discord servers:<ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://discord.com/invite/philosophy">The Philosophy Chat</a></li>
+<li><a href="https://discord.com/invite/philosophy" target="_blank" rel="noopener noreferrer">The Philosophy Chat</a></li>
 </ul>
 </li>
 <li>Other:<ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://fediphilosophy.org/">FediPhilosophy (Mastodon Instance)</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://a.gup.pe/u/philosophy">Philosophy Group (a.gup.pe)</a></li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://www.meetup.com/topics/metaphysics/">Metaphysics Meetup Groups</a></li>
+<li><a href="https://fediphilosophy.org/" target="_blank" rel="noopener noreferrer">FediPhilosophy (Mastodon Instance)</a></li>
+<li><a href="https://a.gup.pe/u/philosophy" target="_blank" rel="noopener noreferrer">Philosophy Group (a.gup.pe)</a></li>
+<li><a href="https://www.meetup.com/topics/metaphysics/" target="_blank" rel="noopener noreferrer">Metaphysics Meetup Groups</a></li>
 </ul>
 </li>
-<li>You can also interact through <a target="_blank" rel="noopener noreferrer" href="https://github.com/hocbigg/metaphysics/issues">GitHub issues</a>. If there is a problem with a course, or a change needs to be made to the curriculum, this is the place to start the conversation. Read more <a href="/CONTRIBUTING.html">here</a>.</li>
-<li>
-<p>Join our Discord server (for discussions around this and other curricula): </p>
-<p><a target="_blank" rel="noopener noreferrer" href="https://discord.gg/KHqAv4Nvm5"><img alt="discord link" src="/assets/discord.png" /></a></p>
-</li>
+<li>You can also interact through <a href="https://github.com/hocbigg/metaphysics/issues" target="_blank" rel="noopener noreferrer">GitHub issues</a>. If there is a problem with a course, or a change needs to be made to the curriculum, this is the place to start the conversation. Read more <a href="/CONTRIBUTING.html">here</a>.</li>
 </ul>
-<h1 id="curriculum">Curriculum</h1>
-<ul>
-<li><a href="#orientation-and-philosophical-tools">Orientation and Philosophical Tools</a></li>
-<li><a href="#core-metaphysical-domains">Core Metaphysical Domains</a></li>
-<li><a href="#historical-foundations-of-metaphysics">Historical Foundations of Metaphysics</a></li>
-</ul>
-<h2 id="how-to-use-this-curriculum">How to use this curriculum</h2>
-<h3 id="core-sections">Core Sections</h3>
-<p>Study them <strong>in this exact order</strong>:</p>
-<ol>
-<li>
-<p><strong>Orientation and Philosophical Tools</strong><br />
-   Start here. These units give you the basic concepts, reading skills, and reasoning tools you need before anything else.</p>
-</li>
-<li>
-<p><strong>Core Metaphysical Domains</strong><br />
-   This is the heart of the subject. Work through units 4–7 in order. They cover the main areas that almost every serious student of metaphysics must understand.</p>
-</li>
-<li>
-<p><strong>Historical Foundations of Metaphysics</strong><br />
-   After the core domains, go back in time. Units 8 and 9 provide crucial historical context that helps you understand why contemporary debates are shaped the way they are.</p>
-</li>
-</ol>
-<h2 id="orientation-and-philosophical-tools">Orientation and Philosophical Tools</h2>
-<table>
-<thead>
-<tr>
-<th>Subject</th>
-<th>Why study?</th>
-<th>Book/Text</th>
-<th>Online Course</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1. Introduction to Philosophy</td>
-<td>Conceptual orientation; argument analysis; reading philosophy.</td>
-<td><strong><a target="_blank" rel="noopener noreferrer" href="https://open.umn.edu/opentextbooks/textbooks/1270">An Introduction to Philosophy</a></strong> (Open Textbook, Univ. of Minnesota)</td>
-<td><strong><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/24-00-problems-of-philosophy-fall-2019/">MIT OCW – Introduction to Philosophy (24.00)</a></strong></td>
-</tr>
-<tr>
-<td>2. Introduction to Metaphysics</td>
-<td>Core problems, vocabulary, and motivation.</td>
-<td><strong><a target="_blank" rel="noopener noreferrer" href="https://www.researchgate.net/publication/342082817_Metaphysics_A_Guided_Tour_for_Beginners">Metaphysics: A Guided Tour for Beginners</a></strong> (free PDF)</td>
-<td><strong><a target="_blank" rel="noopener noreferrer" href="https://www.coursera.org/learn/metaphysics">Coursera – Reality Bites: Introduction to Metaphysics</a></strong></td>
-</tr>
-<tr>
-<td>3. Logic for Metaphysics</td>
-<td>Formal reasoning, validity, and structure of metaphysical arguments.</td>
-<td><strong><a target="_blank" rel="noopener noreferrer" href="https://forallx.openlogicproject.org/">forall x: Calgary Remix</a></strong> (free PDF)</td>
-<td><strong><a target="_blank" rel="noopener noreferrer" href="https://www.edx.org/learn/logic/stanford-university-introduction-to-logic">edX – Introduction to Logic (Stanford)</a></strong></td>
-</tr>
-</tbody>
-</table>
-<h2 id="core-metaphysical-domains">Core Metaphysical Domains</h2>
-<table>
-<thead>
-<tr>
-<th>Subject</th>
-<th>Why study?</th>
-<th>Book/Text</th>
-<th>Online Course</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>4. Ontology (Being, Existence, Categories): Universals, particulars, substance, properties, grounding.</td>
-<td></td>
-<td><strong><a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/metaphysics0000vani">Metaphysics</a></strong> – Peter van Inwagen + <strong><a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/metaphysicsconte0000loux">Metaphysics: A Contemporary Introduction</a></strong> – Michael J. Loux + (<strong>Supplement</strong>) <strong><a target="_blank" rel="noopener noreferrer" href="https://plato.stanford.edu/entries/ontology/">SEP – Ontology</a></strong>; <strong><a target="_blank" rel="noopener noreferrer" href="https://plato.stanford.edu/entries/grounding/">Grounding</a></strong></td>
-<td><strong><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/24-221-metaphysics-spring-2015/">MIT OCW – Metaphysics (24.221)</a></strong></td>
-</tr>
-<tr>
-<td>5. Modality and Necessity: Possible worlds, necessity, essence, counterfactuals.</td>
-<td></td>
-<td><strong><a target="_blank" rel="noopener noreferrer" href="https://plato.stanford.edu/entries/logic-modal/">SEP – Modal Logic</a></strong>; <strong><a target="_blank" rel="noopener noreferrer" href="https://plato.stanford.edu/entries/possible-worlds/">Possible Worlds</a></strong></td>
-<td><strong><a target="_blank" rel="noopener noreferrer" href="https://ocw.mit.edu/courses/24-221-metaphysics-spring-2015/">MIT OCW – Metaphysics (selected lectures on modality)</a></strong></td>
-</tr>
-<tr>
-<td>6. Time, Change, and Causation: A-series/B-series, persistence, causal powers, laws of nature.</td>
-<td></td>
-<td><strong><a target="_blank" rel="noopener noreferrer" href="https://plato.stanford.edu/entries/time/">SEP – Time</a></strong>; <strong><a target="_blank" rel="noopener noreferrer" href="https://plato.stanford.edu/entries/persistence/">Persistence</a></strong>; <strong><a target="_blank" rel="noopener noreferrer" href="https://plato.stanford.edu/entries/causation-metaphysics/">Causation</a></strong></td>
-<td>MIT OCW – Metaphysics (selected lectures)</td>
-</tr>
-<tr>
-<td>7. Philosophy of Mind (as Metaphysics): Mind–body problem, consciousness, mental causation, personal identity.</td>
-<td></td>
-<td><strong><a target="_blank" rel="noopener noreferrer" href="https://plato.stanford.edu/entries/mind-body-problem/">SEP – Mind–Body Problem</a></strong>; <strong><a target="_blank" rel="noopener noreferrer" href="https://plato.stanford.edu/entries/consciousness/">Consciousness</a></strong></td>
-<td><strong><a target="_blank" rel="noopener noreferrer" href="https://oyc.yale.edu/philosophy/phil-181">Yale OYC – Philosophy and the Science of Human Nature</a></strong></td>
-</tr>
-</tbody>
-</table>
-<h2 id="historical-foundations-of-metaphysics">Historical Foundations of Metaphysics</h2>
-<table>
-<thead>
-<tr>
-<th>Subject</th>
-<th>Why study?</th>
-<th>Book/Text</th>
-<th>Online Course</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>8. Ancient Metaphysics</td>
-<td>Forms, substance, causality, potentiality/actuality.</td>
-<td><strong><a target="_blank" rel="noopener noreferrer" href="https://archive.org/details/readingsinancien0000unse_y2y7">Readings in Ancient Greek Philosophy</a></strong> (Archive.org)</td>
-<td><strong><a target="_blank" rel="noopener noreferrer" href="https://www.coursera.org/learn/plato">Coursera – Ancient Philosophy: Plato &amp; His Predecessors</a></strong></td>
-</tr>
-<tr>
-<td>9. Early Modern Metaphysics</td>
-<td>Substance dualism, causation, identity, empiricism vs rationalism.</td>
-<td><strong><a target="_blank" rel="noopener noreferrer" href="https://www.earlymoderntexts.com/assets/pdfs/descartes1641.pdf">Meditations on First Philosophy</a></strong> – René Descartes (free)</td>
-<td><strong><a target="_blank" rel="noopener noreferrer" href="https://podcasts.ox.ac.uk/people/peter-millican">Oxford – Early Modern Philosophy (Peter Millican, free podcasts)</a></strong></td>
-</tr>
-</tbody>
-</table>
-<h1 id="code-of-conduct">Code of conduct</h1>
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/hocbigg/code-of-conduct">Hocbigg's code of conduct</a>.</p>
-</article>
-</main>
+<h2 id="curriculum">Curriculum</h2>
+<h3 id="introduction-to-metaphysics">Introduction to Metaphysics</h3>
+<p>Introduces the fundamental questions, vocabulary, and methodology of metaphysics, analyzing what reality consists of and how to evaluate metaphysical claims.</p>
+<p><a href="https://books.google.com/books?isbn=9780198724049" target="_blank" rel="noopener noreferrer">Riddles of Existence: A Guided Tour of Metaphysics (Earl Conee &amp; Theodore Sider)</a> - An informal, highly accessible entry point that introduces the central riddles of metaphysics using vivid thought experiments for absolute beginners.</p>
+<p><a href="https://books.google.com/books?isbn=9780521533683" target="_blank" rel="noopener noreferrer">An Introduction to Metaphysics (John W. Carroll &amp; Ned Markosian)</a> - A systematic introductory textbook that formalizes arguments and counterarguments; read alongside or immediately after Conee and Sider for greater analytical rigor.</p>
+<p><a href="https://www.coursera.org/learn/metaphysics" target="_blank" rel="noopener noreferrer">Reality Bites: Introduction to Metaphysics (Coursera / Erasmus University Rotterdam)</a> - An interactive video course that grounds abstract metaphysical topics—such as universals, substance, time, and composition—in everyday physical examples.</p>
+<h3 id="logic-for-metaphysics">Logic for Metaphysics</h3>
+<p>Covers formal validity, truth-functional propositional logic, and first-order predicate logic with identity, establishing the deductive reasoning required to analyze metaphysical theories.</p>
+<p><a href="https://forallx.openlogicproject.org/" target="_blank" rel="noopener noreferrer">forall x: Calgary (Aaron Thomas-Bolduc &amp; Richard Zach / Open Logic Project)</a> - A comprehensive, open-access textbook covering truth tables, formal semantics, natural deduction proofs, and predicate logic with identity.</p>
+<p><a href="https://www.coursera.org/learn/logic" target="_blank" rel="noopener noreferrer">Introduction to Logic (Coursera / Stanford University)</a> - An interactive video course on formal logical deduction that serves as a practical, computational companion or alternative to the Calgary text.</p>
+<h3 id="ancient-metaphysics">Ancient Metaphysics</h3>
+<p>Examines the classical origins of Western metaphysics, focusing on the Presocratic problem of change, Plato's Theory of Forms, and Aristotle's doctrine of categories, substance, and hylomorphism.</p>
+<p><a href="https://www.coursera.org/learn/plato" target="_blank" rel="noopener noreferrer">Ancient Philosophy: Plato and His Predecessors (Coursera / University of Pennsylvania)</a> - A video lecture course tracing the earliest Western inquiries into reality and change from the Milesians and Parmenides through Plato's metaphysical dialogues.</p>
+<p><a href="https://www.coursera.org/learn/aristotle" target="_blank" rel="noopener noreferrer">Ancient Philosophy: Aristotle and His Successors (Coursera / University of Pennsylvania)</a> - The direct sequel to the Plato course, delivering focused instruction on Aristotle's Categories, natural philosophy, four causes, and metaphysical substance.</p>
+<p><a href="https://books.google.com/books?isbn=9781624665325" target="_blank" rel="noopener noreferrer">Readings in Ancient Greek Philosophy: From Thales to Aristotle (S. Marc Cohen, Patricia Curd, &amp; C. D. C. Reeve, eds.)</a> - The canonical print anthology containing the essential primary texts with explanatory introductions and commentary to accompany the UPenn courses.</p>
+<p><a href="http://classics.mit.edu/" target="_blank" rel="noopener noreferrer">The Internet Classics Archive (MIT)</a> - A free repository of public-domain translations of Plato's dialogues and Aristotle's Categories, Physics, and Metaphysics.</p>
+<h3 id="early-modern-metaphysics">Early Modern Metaphysics</h3>
+<p>Investigates seventeenth- and eighteenth-century metaphysical systems, including Cartesian mind-body dualism, Spinozist monism, Leibnizian monadology, and British empiricist analyses of substance and causation.</p>
+<p><a href="https://podcasts.ox.ac.uk/series/general-philosophy" target="_blank" rel="noopener noreferrer">General Philosophy (University of Oxford Podcasts / Peter Millican)</a> - An Oxford lecture series that critically evaluates early modern metaphysics, with dedicated lectures on Descartes' dualism, Locke on personal identity, and Hume on causation.</p>
+<p><a href="https://www.earlymoderntexts.com/assets/pdfs/descartes1641.pdf" target="_blank" rel="noopener noreferrer">Meditations on First Philosophy (Early Modern Texts / René Descartes, trans. Jonathan Bennett)</a> - A freely available, modernized primary text establishing foundational arguments for substance dualism and the metaphysical status of the mind.</p>
+<p><a href="https://www.earlymoderntexts.com/assets/pdfs/leibniz1714b.pdf" target="_blank" rel="noopener noreferrer">Monadology (Early Modern Texts / G. W. Leibniz, trans. Jonathan Bennett)</a> - A concise, modernized translation of Leibniz's system of immaterial simple substances, perceptual perspectives, and pre-established harmony.</p>
+<p><a href="https://www.earlymoderntexts.com/assets/pdfs/hume1748.pdf" target="_blank" rel="noopener noreferrer">An Enquiry Concerning Human Understanding (Early Modern Texts / David Hume, trans. Jonathan Bennett)</a> - Modernized primary reading presenting Hume's critique of necessary causal connections and the concept of substantial underlying identity.</p>
+<h3 id="ontology-categories-and-properties">Ontology, Categories, and Properties</h3>
+<p>Investigates what fundamentally exists, examining the debate over universals between metaphysical realism and nominalism, the nature of properties and tropes, and contemporary theories of metaphysical grounding.</p>
+<p><a href="https://books.google.com/books?isbn=9781138639348" target="_blank" rel="noopener noreferrer">Metaphysics: A Contemporary Introduction (Michael J. Loux &amp; Thomas M. Crisp)</a> - Chapters 1 through 3 provide clear conceptual overviews of metaphysical realism, nominalist alternatives, and substratum versus bundle views of particulars.</p>
+<p><a href="https://books.google.com/books?isbn=9781444331028" target="_blank" rel="noopener noreferrer">Metaphysics: An Anthology (Jaegwon Kim, Daniel Z. Korman, &amp; Ernest Sosa, eds.)</a> - Part I serves as the essential primary-source reader to use alongside Loux and Crisp, collecting seminal essays like Quine's "On What There Is" and contemporary papers on ontological grounding.</p>
+<p><a href="https://books.google.com/books?isbn=9780813349343" target="_blank" rel="noopener noreferrer">Metaphysics (Peter van Inwagen)</a> - Part I offers an alternative, highly engaging introductory treatise defending Quinean meta-ontology and the rigorous analysis of existence claims.</p>
+<h3 id="modality-and-possible-worlds">Modality and Possible Worlds</h3>
+<p>Analyzes the metaphysical status of necessity and possibility, the ontological interpretation of possible worlds, the de re versus de dicto distinction, and essentialism.</p>
+<p><a href="https://books.google.com/books?isbn=9781138639348" target="_blank" rel="noopener noreferrer">Metaphysics: A Contemporary Introduction (Michael J. Loux &amp; Thomas M. Crisp)</a> - Chapter 5 presents the foundational textbook explanation of possible worlds semantics, contrasting David Lewis's genuine modal realism with ersatz realism.</p>
+<p><a href="https://books.google.com/books?isbn=9780674598461" target="_blank" rel="noopener noreferrer">Naming and Necessity (Saul A. Kripke)</a> - The foundational monograph that revived modern metaphysics by demonstrating that necessity is an ontological property distinct from the epistemic concept of apriority.</p>
+<p><a href="https://books.google.com/books?isbn=9781444331028" target="_blank" rel="noopener noreferrer">Metaphysics: An Anthology (Jaegwon Kim, Daniel Z. Korman, &amp; Ernest Sosa, eds.)</a> - Part II collects essential primary papers debating modal realism, counterfactual conditionals, and essentialism by David Lewis and Alvin Plantinga.</p>
+<h3 id="time-and-persistence">Time and Persistence</h3>
+<p>Explores the nature of temporal passage—contrasting the dynamic A-theory with the static B-theory—and examines how physical objects persist across time through endurance or four-dimensional perdurance.</p>
+<p><a href="https://books.google.com/books?isbn=9781138639348" target="_blank" rel="noopener noreferrer">Metaphysics: A Contemporary Introduction (Michael J. Loux &amp; Thomas M. Crisp)</a> - Chapters 7 and 8 provide the introductory foundation, breaking down McTaggart's temporal series, presentism versus eternalism, and the problem of change.</p>
+<p><a href="https://books.google.com/books?isbn=9780199263523" target="_blank" rel="noopener noreferrer">Four-Dimensionalism: An Ontology of Persistence and Time (Theodore Sider)</a> - The landmark monograph building upon introductory time metaphysics to argue that objects persist through time by having temporal parts.</p>
+<p><a href="https://books.google.com/books?isbn=9781444331028" target="_blank" rel="noopener noreferrer">Metaphysics: An Anthology (Jaegwon Kim, Daniel Z. Korman, &amp; Ernest Sosa, eds.)</a> - Part V provides the canonical primary source collection on time and persistence, including McTaggart's classic essay and debates between Judith Jarvis Thomson and David Lewis.</p>
+<h3 id="causation-and-laws-of-nature">Causation and Laws of Nature</h3>
+<p>Examines what relates causes to their effects—evaluating regularity, counterfactual, and dispositional powers accounts—and investigates whether laws of nature govern reality or merely summarize regularities.</p>
+<p><a href="https://books.google.com/books?isbn=9780199684434" target="_blank" rel="noopener noreferrer">Causation: A Very Short Introduction (Stephen Mumford &amp; Rani Lill Anjum)</a> - A concise, accessible entry point surveying regularity theories, counterfactual dependence, physical processes, and dispositional causal powers.</p>
+<p><a href="https://books.google.com/books?isbn=9780521533683" target="_blank" rel="noopener noreferrer">An Introduction to Metaphysics (John W. Carroll &amp; Ned Markosian)</a> - Chapter 6 builds directly on introductory concepts to provide a formal analysis of counterfactual causation and competing theories of natural law.</p>
+<p><a href="https://books.google.com/books?isbn=9781444331028" target="_blank" rel="noopener noreferrer">Metaphysics: An Anthology (Jaegwon Kim, Daniel Z. Korman, &amp; Ernest Sosa, eds.)</a> - Part VI gathers the classic modern primary literature on the nature of causal relations and governing laws, including papers by J.L. Mackie, David Lewis, and David Armstrong.</p>
+<h3 id="material-objects-and-mereology">Material Objects and Mereology</h3>
+<p>Investigates parts and wholes, addressing the Special Composition Question, the problem of material constitution, and puzzles of temporary identity and coincidence.</p>
+<p><a href="https://books.google.com/books?isbn=9781138639348" target="_blank" rel="noopener noreferrer">Metaphysics: A Contemporary Introduction (Michael J. Loux &amp; Thomas M. Crisp)</a> - Chapter 9 delivers the textbook breakdown of classical mereology and introduces classic paradoxes like the Ship of Theseus and the Statue and the Lump of Clay.</p>
+<p><a href="https://books.google.com/books?isbn=9780801483066" target="_blank" rel="noopener noreferrer">Material Beings (Peter van Inwagen)</a> - The definitive monograph on material composition, arguing that composite physical objects exist only when their parts constitute a biological life.</p>
+<p><a href="https://books.google.com/books?isbn=9781444331028" target="_blank" rel="noopener noreferrer">Metaphysics: An Anthology (Jaegwon Kim, Daniel Z. Korman, &amp; Ernest Sosa, eds.)</a> - Part VII collects foundational primary essays on mereological sums, constitution versus identity, and ordinary material objects.</p>
+<h3 id="personal-identity-and-the-mind-body-problem">Personal Identity and the Mind-Body Problem</h3>
+<p>Analyzes the metaphysical relationship between physical bodies and conscious experience, exploring criteria for personal survival across time such as biological animalism and psychological continuity.</p>
+<p><a href="https://oyc.yale.edu/philosophy/phil-176" target="_blank" rel="noopener noreferrer">Death (Yale Open Courses / Shelly Kagan)</a> - A complete open video lecture series whose first half (lectures 2–14) provides an exceptionally clear analysis of dualism versus physicalism and the problem of personal identity.</p>
+<p><a href="https://books.google.com/books?isbn=9780520256422" target="_blank" rel="noopener noreferrer">Personal Identity (John Perry, ed.)</a> - The standard historical and analytical reader tracing the persistence of persons from John Locke and Thomas Reid through modern split-brain cases.</p>
+<p><a href="https://books.google.com/books?isbn=9780198249085" target="_blank" rel="noopener noreferrer">Reasons and Persons (Derek Parfit)</a> - Part 3 presents a radical reductionist account of personal identity, arguing through teletransportation and fission thought experiments that identity is not what matters for survival.</p>
+<h3 id="free-will-determinism-and-agency">Free Will, Determinism, and Agency</h3>
+<p>Investigates whether genuine human freedom and moral responsibility can exist in a deterministic universe, evaluating compatibilism, incompatibilism, and agent-causal theories.</p>
+<p><a href="https://books.google.com/books?isbn=9780198249245" target="_blank" rel="noopener noreferrer">An Essay on Free Will (Peter van Inwagen)</a> - The canonical modern defense of incompatibilism, formulating the Consequence Argument to demonstrate that determinism precludes the ability to do otherwise.</p>
+<p><a href="https://podcasts.ox.ac.uk/series/general-philosophy" target="_blank" rel="noopener noreferrer">General Philosophy: Free Will and Determinism (University of Oxford Podcasts / Peter Millican)</a> - Standalone university audio/video lectures that clearly break down classical compatibilism, Frankfurt-style counterexamples, and the dilemma of determinism.</p>
+<p><a href="https://books.google.com/books?isbn=9780521533683" target="_blank" rel="noopener noreferrer">An Introduction to Metaphysics (John W. Carroll &amp; Ned Markosian)</a> - Chapter 4 serves as an accessible textbook introduction to the debate, balancing incompatibilist arguments with modern compatibilist and libertarian responses.</p>
+    </article>
+  </main>
 
 </body>
 </html>
